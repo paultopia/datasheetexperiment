@@ -12,7 +12,7 @@
 (defn home-page []
   [:div [:h2 "I want a datasheet below"]
    [react-datasheet {:data grid
-                        :value-renderer (str "foo")
+                        :value-renderer #(str "foo")
                         :on-change (str "foo")}]
    ])
 
