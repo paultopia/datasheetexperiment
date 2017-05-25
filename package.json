@@ -1,0 +1,24 @@
+{
+  "name": "datasheetexperiment",
+  "version": "1.0.0",
+  "description": "experiment",
+  "scripts": {
+    "watch": "webpack -d --watch",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paultopia/datasheetexperiment.git"
+  },
+  "author": "paul.gowder@gmail.com",
+  "license": "MIT",
+  "homepage": "https://github.com/paultopia/datasheetexperiment#readme",
+  "devDependencies": {
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-datasheet": "^1.2.6",
+    "react-dom": "^15.5.4"
+  }
+}
