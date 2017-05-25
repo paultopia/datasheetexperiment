@@ -7,9 +7,9 @@ const APP_DIR = path.resolve(__dirname, 'src', 'js');
 const config = {
 	  entry: `${APP_DIR}/main.js`,
 	    output: {
-		        path: BUILD_DIR,
-			    filename: 'bundle.js'
-				      },
+		     path: BUILD_DIR,
+		     filename: 'bundle.js'
+		    },
 };
 
 module.exports = config;

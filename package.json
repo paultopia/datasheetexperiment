@@ -14,7 +14,7 @@
   "license": "MIT",
   "homepage": "https://github.com/paultopia/datasheetexperiment#readme",
   "devDependencies": {
-    "webpack": "^2.6.1"
+    "webpack": "2.6.1"
   },
   "dependencies": {
     "react": "^15.5.4",
