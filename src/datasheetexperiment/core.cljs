@@ -4,16 +4,20 @@
 ;; bring in js component
 
 (def react-datasheet (reagent/adapt-react-class (aget js/window "deps" "react-datasheet")))
-(def grid (clj->js [[{:value 1} {:value 2}] [{:value 3} {:value 4}]]))
+
+(def underlying-data (reagent/atom [[{:value 1} {:value 2}] [{:value 3} {:value 4}]]))
+
+(defn updater [old-data row column new-value]
+  (assoc-in old-data [row column :value] (js/parseInt new-value)))
 
 ;; -------------------------
 ;; Views
 
 (defn home-page []
-  [:div [:h2 "I want a datasheet below"]
-   [react-datasheet {:data grid
+  [:div [:h2 "Datasheet below is editable (integers only)!"]
+   [react-datasheet {:data (clj->js @underlying-data)
                         :value-renderer #(.-value %)
-                        :on-change #(.log js/console %)}]
+                     :on-change #(swap! underlying-data updater %2 %3 %4)}]
    ])
 
 ;; -------------------------
